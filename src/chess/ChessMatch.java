@@ -2,7 +2,9 @@ package chess;
 
 import boardGame.Board;
 import boardGame.Position;
+import chess.pieces.Bishop;
 import chess.pieces.King;
+import chess.pieces.Knight;
 import chess.pieces.Queen;
 import chess.pieces.Rook;
 
@@ -28,7 +30,15 @@ public class ChessMatch {
 	private void initialSetup() {
 		board.placePiece(new Rook(board, Color.WHITE), new Position(7, 0));
 		board.placePiece(new Rook(board, Color.WHITE), new Position(7, 7));
+		
+		board.placePiece(new Knight(board, Color.WHITE), new Position(7, 6));
+		board.placePiece(new Knight(board, Color.WHITE), new Position(7, 1));
+		
+		board.placePiece(new Bishop(board, Color.WHITE), new Position(7, 2));
+		board.placePiece(new Bishop(board, Color.WHITE), new Position(7, 5));
+		
 		board.placePiece(new King(board, Color.WHITE), new Position(7, 4));
 		board.placePiece(new Queen(board, Color.WHITE), new Position(7, 3));
+		
 	}
 }
